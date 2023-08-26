@@ -24,3 +24,22 @@ findSequences(1) === []
 
 
 // Solution
+
+let x, sum, temp, answer;
+function findSequences(n) {
+  answer = [];
+  for (let i = 1; i < n; i++) {
+    x = i;
+    sum = 0;
+    temp = [];
+    while (sum < n) {
+      sum += x;
+      temp.push(x);
+      x++;
+    }
+    if (sum == n) {
+      answer.push(temp);
+    }
+  }
+  return answer.sort((a,b) => a.length - b.length);
+}
