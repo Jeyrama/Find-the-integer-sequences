@@ -45,3 +45,19 @@ function findSequences(n) {
 }
 
 // or
+
+const findSequences = (n) => {
+  let arr1 = [];
+  let arr2 = [];
+
+  for (let i = 1; i < n; i++) {
+    arr2 = [];
+    let s = 0;
+    for (let k = i; s < n; k++) {
+      arr2.push(k);
+      s += k;
+    }
+    if (s === n) arr1.push(arr2);
+  }
+  return arr1.reverse();
+}
