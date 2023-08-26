@@ -43,3 +43,5 @@ function findSequences(n) {
   }
   return answer.sort((a,b) => a.length - b.length);
 }
+
+// or
